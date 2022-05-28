@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Nhóm 09</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
 </head>
 
 <body>
@@ -60,7 +65,7 @@
 
         <!-- Playlist -->
         <div class="playlist">
-            <div class="song">
+            <div class="song active">
                 <div class="thumb"
                     style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
                 </div>
@@ -68,14 +73,42 @@
                     <h3 class="title">Music name</h3>
                     <p class="author">Singer</p>
                 </div>
-                <div class="option">
-                    <a href=""><i class="fas fa-download"></i></a>
+                <ul class="option">
+                    <li><a href=""><i class="fas fa-download"></i></a></li>
+                    <li>
+                        <a href="" class="btn-cmt"><i class="fa-solid fa-comment"></i></a>
+                    </li>
+                </ul>
+
+
+            </div>
+
+        </div>
+        <div class="comment">
+
+            <textarea class="input-comment"></textarea>
+
+            <input type="text" class="input-name" placeholder="Name (bắt buộc)">
+
+            <button class="btn-comment">OK</button>
+
+            <div class="comment-body">
+                <div class="cmt">
+                    <div class="logo">
+                        <img src="" alt="" class="comment-logo">
+                    </div>
+                    <div class="content">
+                        <h3 class="username">Đức</h3>
+                        <p class="des">Anh yêu emilia!</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
 
+
     <script src="/app.js"></script>
-</body>
+    
 
 </html>

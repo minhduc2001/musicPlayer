@@ -163,7 +163,8 @@ header h2 {
 
 .song.active .option,
 .song.active .author,
-.song.active .title {
+.song.active .title,
+.song.active .option li a {
     color: #fff;
 }
 
@@ -191,7 +192,116 @@ header h2 {
 }
 
 .song .option {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
     padding: 16px 8px;
     color: #999;
     font-size: 18px;
+}
+.song .option li{
+    margin: 0 8px;
+}
+
+.song .option li a{
+    color: black;
+}
+
+
+/* css modal */
+/* ::-webkit-scrollbar-corner{
+
+} */
+::-webkit-scrollbar {
+    width: 0px;
+    background-color: #F5F5F5;
+} 
+.comment{
+    
+    position: fixed;
+    bottom: 2%;
+    left: 65%;
+    width: 20%;
+    min-height: 500px;
+    background-color: rgb(170, 170, 170);
+    overflow-y: scroll;
+    display: none;
+}
+.hide{
+    display: block;
+}
+.comment .input-comment{
+    position: absolute;
+    margin: 10px;
+    right: 0;
+    left: 0;
+    min-height: 70px;
+    font-size: 15px;
+    padding: 10px 8px;
+    outline: 0;
+}
+
+
+.comment .input-name{
+    width: 70%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 10px;
+    top: 85px;
+    height: 30px;
+    outline: 0;
+}
+.comment .btn-comment{
+    position: absolute;
+    width: 20%;
+    margin: 10px;
+    top: 85px;
+    height: 30px;
+    right: 0;
+}
+
+.comment .comment-body{
+    position: absolute;
+    margin: 10px;
+    top: 135px;
+    right: 0;
+    left: 0;
+    background-color: white;
+    /* max-height: 600px; */
+    font-size: 15px;
+    padding: 10px 8px;
+    outline: 0;
+    
+}
+.cmt{
+    border-radius: 5px;
+    border: 1px solid ;
+    display: flex;
+    justify-content: flex-start;
+    background-color:while;
+    margin-bottom: 10px;
+    min-height: 60px;
+}
+.cmt .logo{
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    background-color: #111;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+/* .cmt .logo img {
+    background-image: url('https://lh3.googleusercontent.com/N065semw08v7Nb6P2qiTmK3QYUklGEAOeoJ7ELHV9jcfygJVVpt80S6vJ_ivXKPzDViLc6KLLgTL7eTzsOY4AHXLuYhhX95cN5m9PMzbqGfn6RjoWjLMQ7wdcp-RO3nqPU6CxODXbdxK-Q8lLcrX2igh2_FCSlTWM_rk23aLegvO4mjo_tuJKNLi7hS4fr_BIWNnKL2ew2Qt9lqgzpHLs2HVGBf29d0eCuPPiaOmt94PJ4xBda7TpYtPeLDokTzpRy8kpIG7OwDTn8Rgx5SJof-oSrnrqgwNvJWxJqWYN7mTS351enrqukxpUR8cBFjTT7nVzxWK3bSiYyXBg55g3dIlKlJZ0SF_HLP5-TtuFHCT0rvxsHoX5undkTStGqcDOpmEt3u7vJQX3FREbChzgzxRyFgvVDuHfvGLgUkt1cwxfXwHLkg3239lw7jglDFdFgy2sxju7MzRhu4XFQgSKPomco7Q72qM6Bpgare_0UOsYFR2bxNxobgLqqfzdjrJEvoK1l9uo1OoLDUWoCEm3ljXGu5EsvWpbbx7e0ROn5IXDtPyO5vl3vD1lbqw8Nlm7gGb7K42letgNScb_U20C3yOTNwrCrMiCsd3tKA3Sdqy3rtEje8QvF7rlVZCnRZgufzhO1FlS2CN7M6o0tkywSA7dqpKwI-2mYv4621ZEBeSY1YwpM_kbPyePA155URVtXRSujNPbKhvkurTBwW4DpZMs77bhYGFsRSKTQeYlLWWBf7ql289LKwckNv3v3FqpwpXK9UhvdGYlf4F5BHI0AiAXV-Xb7Ut=s929-no?authuser=1');
+    width: 100%;
+} */
+.username{
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.des{
+    margin: 5px 0;
+    font-size: 14px;
 }
