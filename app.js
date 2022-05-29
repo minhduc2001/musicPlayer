@@ -94,7 +94,7 @@ const app = async () => {
                 </div>
                 <ul class="option">
                     <li><a href="${api}download?id=${song.src}"><i class="fas fa-download"></i></a></li>
-                    <li><a href="" onclick="handleClickComment(event,'${song._id}')"><i class="fa-solid fa-comment-dots"></i></a></li>
+                    <li><a href="" onclick="handleClickComment(event,'${song.id}')"><i class="fa-solid fa-comment-dots"></i></a></li>
 
                 </ul>
                 </div>`
@@ -258,7 +258,7 @@ const app = async () => {
                                         </div>
                                     </div>`
                     
-                    pushCmt({comment, person, Music});
+                    pushCmt({comment, person, Music, createdAt: new Date()});
                     cmtBody.insertAdjacentHTML('afterbegin', newDiv)
                     $('.input-comment').value= '';
                     $('.input-name').value= '';
@@ -354,6 +354,7 @@ const getCmt = async (id) =>{
 }
 
 const handleClickComment = (e, id) => {
+    // console.log(id);
     e.preventDefault();
     if (isComment == false) {
         comment.classList.add('hide')
